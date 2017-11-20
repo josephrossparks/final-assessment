@@ -1,11 +1,17 @@
 const INITIAL_STATE = {
-  
+  loggedInUser: null
 }
 
 export default function (state = INITIAL_STATE, action) {
     switch (action.type) {
 
-      default:
-        return state;
+    	case "LOGIN_SUCCESS":
+    		return Object.assign({}, state, {
+                loggedInUser: action.user
+            });
+            debugger;
+
+      	default:
+        	return state;
     }
 }
