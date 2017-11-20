@@ -15,11 +15,13 @@ class LogInForm extends Component {
   render() {
 
     return (
-      <div>
+      <div className="LogInForm">
+        <h1>Sign In</h1>
         <form onSubmit={ this.handleSubmit}>
           <input placeholder="Username" type="text" onChange={this.handleUsernameChange}></input>
           <input placeholder="Password" type="password" onChange={this.handlePasswordChange}></input>
           <button type="submit">Log In</button>
+          <a>Forgot your password?</a>
         </form>
       </div>
     );
@@ -47,7 +49,7 @@ class LogInForm extends Component {
       username:"",
       password:""
     })
-    debugger;
+   
   };
 
 }

@@ -9,11 +9,17 @@ class UserProfile extends Component {
       <div className="ProfileContainer">
         <h1>Profile</h1>
         <h3>Welcome, {this.props.loggedInUser.name}!</h3>
-          <img src={this.props.loggedInUser.img}></img>
-          <p>Email: {this.props.loggedInUser.email}</p>
-          <p>Phone Number: {this.props.loggedInUser.phone}</p>
-          <p>Location: {this.props.loggedInUser.location}</p>
-        <a>EditProfile</a>
+          <div className="profile">
+            <img src={this.props.loggedInUser.img} height="120px" width="200px" ></img>
+            <div className="profileText">
+              <ul>
+                <li>Email: {this.props.loggedInUser.email}</li>
+                <li>Phone Number: {this.props.loggedInUser.phone}</li>
+                <li>Location: {this.props.loggedInUser.location}</li>
+              </ul>
+            </div>
+          </div>
+        <a>Edit Profile</a>
       </div>
     );
 

@@ -9,7 +9,6 @@ export default function (state = INITIAL_STATE, action) {
     		return Object.assign({}, state, {
                 loggedInUser: action.user
             });
-            debugger;
 
       	default:
         	return state;
