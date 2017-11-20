@@ -10,6 +10,11 @@ export default function (state = INITIAL_STATE, action) {
                 loggedInUser: action.user
             });
 
+        case "LOGIN_FAILED":
+    		return Object.assign({}, state, {
+                loggedInUser: null
+            });
+
       	default:
         	return state;
     }
